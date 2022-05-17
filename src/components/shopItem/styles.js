@@ -40,7 +40,6 @@ export const StyledHeartItem = styled(HeartIcon)`
         css`
             path {
                 fill: none;
-                fill-opacity: 1;
                 stroke: black;
             }
         `

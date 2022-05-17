@@ -6,7 +6,11 @@ import {
     StyledHomePage,
     StyledContainer,
     StyledUpperPart,
-    StyledItemSection
+    StyledItemSection,
+    StyledSortDropdown,
+    StyledParagraph,
+    StyledDropdownLeftPart,
+    StyledArrowIcon
 } from "./styles"
 import ShopItem from "../../components/shopItem"
 import Footer from "../../components/footer"
@@ -26,8 +30,16 @@ export const HomePage = () => {
             <Header />
             <StyledContainer>
                 <StyledUpperPart>
-                    <p>24 listings shown</p>
-                    <p>Sort by</p>
+                        <p>{scans.length + 1} listings shown</p>
+                    <StyledSortDropdown>
+                        <StyledDropdownLeftPart>
+                            <StyledParagraph>Sort by:</StyledParagraph>
+                        </StyledDropdownLeftPart>
+                        <StyledParagraph>
+                            <span>Latest arrivals</span>
+                            <StyledArrowIcon />
+                        </StyledParagraph>
+                    </StyledSortDropdown>
                 </StyledUpperPart>
                 <StyledItemSection>
                     {

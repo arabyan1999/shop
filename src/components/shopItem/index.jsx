@@ -16,7 +16,7 @@ const ShopItem = ({ image, title, description, price, isLiked }) => {
         <StyledItemContainer>
             <StyledItem>
                 <StyledImageSection>
-                    <StyledHeartItem isliked={isLiked} />
+                    <StyledHeartItem isliked={isLiked ? 1 : 0} />
                     <StyledImage src={image} alte={title} sizes="cover" />
                 </StyledImageSection>
                 <StyledLowerSection>
