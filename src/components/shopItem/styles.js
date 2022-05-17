@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components"
+import { ReactComponent as HeartIcon } from "../../assets/icons/heart.svg"
 
 export const StyledItemContainer =styled.div`
     margin-bottom: 73px;
@@ -11,6 +12,7 @@ export const StyledItemContainer =styled.div`
 `
 
 export const StyledItem = styled.div`
+    position: relative;
     width: 487px;
     img {
         width: 100%;
@@ -18,6 +20,33 @@ export const StyledItem = styled.div`
     @media (max-width: 376px) {
         width: auto;
         max-width: 163px;
+    }
+`
+
+export const StyledHeartItem = styled(HeartIcon)`
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+    ${({isliked}) => isliked ?
+        css`
+            path {
+                fill: red;
+                fill-opacity: 1;
+                stroke: red;
+            }
+        `
+        :
+        css`
+            path {
+                fill: none;
+                fill-opacity: 1;
+                stroke: black;
+            }
+        `
+    }
+    @media (max-width: 376px) {
+        display: none;
     }
 `
 

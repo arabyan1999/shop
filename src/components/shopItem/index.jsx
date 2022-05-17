@@ -7,14 +7,16 @@ import {
     StyledBottomLeftPart,
     StyledTitle,
     StyledDescription,
-    StyledItemContainer
+    StyledItemContainer,
+    StyledHeartItem
 } from "./styles"
 
-const ShopItem = ({ image, title, description, price }) => {
+const ShopItem = ({ image, title, description, price, isLiked }) => {
     return (
         <StyledItemContainer>
             <StyledItem>
                 <StyledImageSection>
+                    <StyledHeartItem isliked={isLiked} />
                     <StyledImage src={image} alte={title} sizes="cover" />
                 </StyledImageSection>
                 <StyledLowerSection>

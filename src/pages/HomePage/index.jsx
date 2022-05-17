@@ -38,6 +38,7 @@ export const HomePage = () => {
                                 title={element.name}
                                 description={element.description}
                                 price={element.price}
+                                isLiked={element.isLiked}
                             />
                         ))
                     }
