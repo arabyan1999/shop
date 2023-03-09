@@ -1,25 +1,17 @@
 import styled, { css } from "styled-components"
 import { ReactComponent as HeartIcon } from "../../assets/icons/heart.svg"
 
-export const StyledItemContainer =styled.div`
-    margin-bottom: 73px;
-    background: transparent;
-    padding: 4px;
-    @media (max-width: 376px) {
-        padding: 2px;
-        margin-bottom: 16px;
-    }
-`
-
 export const StyledItem = styled.div`
     position: relative;
-    width: 487px;
+    width: 300px;
+    margin-bottom: 43px;
+    background: transparent;
     img {
         width: 100%;
     }
-    @media (max-width: 376px) {
+    @media (max-width: 500px) {
         width: auto;
-        max-width: 163px;
+        margin-bottom: 16px;
     }
 `
 
@@ -51,7 +43,6 @@ export const StyledHeartItem = styled(HeartIcon)`
 
 export const StyledImageSection = styled.div`
     width: 100%;
-    height: 584px;
     margin-bottom: 9px;
     border-radius: 10px;
     @media (max-width: 376px) {
@@ -77,8 +68,15 @@ export const StyledBottomLeftPart = styled.div`
     }
 `
 
+export const StyledP = styled.p`
+    font-weight: 700;
+    font-size: 16px;
+    min-width: max-content;
+`
+
 export const StyledTitle = styled.p`
     text-transform: uppercase;
+    font-weight: 700;
 `
 
 export const StyledDescription = styled.p`

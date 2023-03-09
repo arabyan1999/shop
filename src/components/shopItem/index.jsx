@@ -7,13 +7,12 @@ import {
     StyledBottomLeftPart,
     StyledTitle,
     StyledDescription,
-    StyledItemContainer,
-    StyledHeartItem
+    StyledHeartItem,
+    StyledP
 } from "./styles"
 
 const ShopItem = ({ image, title, description, price, isLiked }) => {
     return (
-        <StyledItemContainer>
             <StyledItem>
                 <StyledImageSection>
                     <StyledHeartItem isliked={isLiked ? 1 : 0} />
@@ -24,10 +23,9 @@ const ShopItem = ({ image, title, description, price, isLiked }) => {
                         <StyledTitle>{title}</StyledTitle>
                         <StyledDescription>{description}</StyledDescription>
                     </StyledBottomLeftPart>
-                    <p>$ {price}</p>
+                    <StyledP>$ {price}</StyledP>
                 </StyledLowerSection>
             </StyledItem>
-        </StyledItemContainer>
     )
 }
 

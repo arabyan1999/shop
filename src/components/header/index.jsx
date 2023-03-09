@@ -6,9 +6,9 @@ import {
     StyledEllipseIcon,
     StyledSearchBar,
     StyledSearchIcon,
-    StyledBurgerMenuWrapper
+    StyledBurgerMenuWrapper,
+    StyledSigmaLogo
 } from "./styles"
-import { ReactComponent as SigmaLogo } from "../../assets/logos/SigmaLogo.svg"
 import { useScrollingElement } from "../../hooks/useScrollingElement"
 
 const Header = () => {
@@ -22,11 +22,11 @@ const Header = () => {
                 <span />
             </StyledBurgerMenuWrapper>
             <StyledNav className={trigger ? "active" : ""}>
-                <StyledNavItem marginRight="48px" onClick={() => setTrigger(false)}>Menswear</StyledNavItem>
-                <StyledNavItem marginRight="48px" onClick={() => setTrigger(false)}>Womenswear</StyledNavItem>
+                <StyledNavItem marginRight="30px" onClick={() => setTrigger(false)}>Menswear</StyledNavItem>
+                <StyledNavItem marginRight="30px" onClick={() => setTrigger(false)}>Womenswear</StyledNavItem>
                 <StyledNavItem onClick={() => setTrigger(false)}>Everything Else</StyledNavItem>
             </StyledNav>
-            <SigmaLogo />
+            <StyledSigmaLogo />
             <StyledSearchIcon />
             <StyledSearchBar>
                 <StyledNavItem marginRight="48px">Search</StyledNavItem>

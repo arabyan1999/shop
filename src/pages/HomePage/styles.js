@@ -6,12 +6,13 @@ export const StyledHomePage = styled.div`
 `
 
 export const StyledContainer = styled.div`
-    padding: 39px 75px 0;
+    margin: 39px auto 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-width: 1140px;
     @media (max-width: 376px) {
-        padding: 20px 15px 0;
+        margin: 20px auto 0;
     }
 `
 
@@ -25,30 +26,16 @@ export const StyledUpperPart = styled.div`
 `
 
 export const StyledItemSection = styled.div`
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-row-gap: 16px;
     justify-content: space-between;
     margin-top: 29px;
-    margin-bottom: 66px;
-`
-
-export const StyledSortDropdown = styled.div`
-    border: 1px solid #A0A0A0;
-    background: #fff;
-    display: flex;
-    border-radius: 6px;
-`
-
-export const StyledDropdownLeftPart = styled.div`
-    border-right: 1px solid #A0A0A0;
-`
-
-export const StyledParagraph = styled.p`
-    margin: 7px 16px;
-    align-items: center;
-    display: flex;
-`
-
-export const StyledArrowIcon = styled(ArrowIcon)`
-    margin-left: 10px;
+    @media (max-width: 900px) {
+        grid-template-columns: repeat(2, auto);
+    }
+    @media (max-width: 600px) {
+        grid-template-columns: auto;
+        justify-content: center;
+    }
 `

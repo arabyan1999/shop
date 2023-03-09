@@ -3,7 +3,11 @@ import { StyledFooter, StyledP } from "./styles"
 const Footer = () => (
     <StyledFooter>
         <StyledP>
-            © 2022 Sinclair Global
+            ©
+            {" "}
+            {new Date().getFullYear()}
+            {" "}
+            Sinclair Global
         </StyledP>
     </StyledFooter>
 )
