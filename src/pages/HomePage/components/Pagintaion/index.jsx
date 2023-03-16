@@ -6,7 +6,6 @@ export function PaginatedItems({ itemsPerPage, products }) {
     const [itemOffset, setItemOffset] = useState(0);
     const endOffset = itemOffset + itemsPerPage;
     const currentItems = products.slice(itemOffset, endOffset);
-    console.log(currentItems)
     const pageCount = Math.ceil(products.length / itemsPerPage);
     const handlePageClick = (event) => {
       const newOffset = (event.selected * itemsPerPage) % products.length;

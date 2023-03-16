@@ -25,9 +25,9 @@ export const HomePage = () => {
             <Header />
             <StyledContainer>
                 <StyledUpperPart>
-                    <p>{products.length} listings shown</p>
+                    <p>{products.length ?? 0} listings shown</p>
                 </StyledUpperPart>
-                    <PaginatedItems itemsPerPage={9} products={products} />
+                {!!products.length ? <PaginatedItems itemsPerPage={9} products={products} /> : null}
                 <Footer />
             </StyledContainer>
         </StyledHomePage>

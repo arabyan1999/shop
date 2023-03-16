@@ -24,7 +24,7 @@ export const StyledNav = styled.div`
     @media (max-width: 992px) {
         width: 100%;
         position: fixed;
-        top: 119px;
+        top: 87px;
         left: -150%;
         right: 0;
         flex-direction: column;
@@ -69,6 +69,10 @@ export const StyledNavItem = styled.button`
     margin-right: ${({marginRight}) => marginRight ? marginRight : ""};
     font-size: 18px;
     cursor: pointer;
+    &.activeLink {
+        text-decoration: underline;
+        font-weight: 700;
+    }
     @media (max-width: 992px) {
         margin-right: 0;
         margin-bottom: 40px;
